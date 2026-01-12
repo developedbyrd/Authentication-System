@@ -4,7 +4,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import authRoute from "./routes/auth.route.js";
 import todoRoute from "./routes/todo.route.js";
-import { NODE_ENV, PORT } from "./config/config.js";
+import { NODE_ENV, PORT, CORS_ORIGIN } from "./config/config.js";
 import connectDB from "./config/db.config.js";
 
 dotenv.config();
@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://authentication-system-ivory.vercel.app"],
+    origin: [CORS_ORIGIN],
     credentials: true,
   })
 );
