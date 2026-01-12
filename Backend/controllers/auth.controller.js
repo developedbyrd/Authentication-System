@@ -1,4 +1,4 @@
-import { JWT_REFRESH_EXPIRE, JWT_REFRESH_SECRET, JWT_SECRET, NODE_ENV } from "../config/config.js";
+import { JWT_REFRESH_EXPIRE, JWT_REFRESH_SECRET, JWT_SECRET, JWT_EXPIRE, NODE_ENV } from "../config/config.js";
 import User from "../models/user.model.js";
 import jwt from "jsonwebtoken";
 
